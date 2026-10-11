@@ -1,8 +1,8 @@
 # Theme from the "Synthora" wireframe: soft paper background, white cards, violet accent, navy ink,
-# DM Sans for text and Manrope for headings. The wireframe is light-only, so a single light theme is defined.
+# DM Sans for text and Manrope for headings. Light and dark variants are both defined, which enables the
+# System / Light / Dark switcher in the app menu. The custom CSS (src/ui/components.py) follows the same choice.
 
 [theme]
-base = "light"
 font = "DM Sans:https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap, sans-serif"
 headingFont = "Manrope:https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap, sans-serif"
 codeFont = "JetBrains Mono:https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap, monospace"
@@ -16,6 +16,7 @@ showWidgetBorder = true
 showSidebarBorder = true
 linkUnderline = false
 
+[theme.light]
 primaryColor = "#7159dc"
 backgroundColor = "#f7f7fb"
 secondaryBackgroundColor = "#ffffff"
@@ -33,16 +34,39 @@ redColor = "#c0392b"
 violetColor = "#7159dc"
 chartCategoricalColors = ["#7159dc", "#27876e", "#4181bf", "#b78127", "#c0568c", "#389592", "#9294a6"]
 
-[theme.sidebar]
+[theme.light.sidebar]
 backgroundColor = "#ffffff"
 secondaryBackgroundColor = "#f7f6fc"
 borderColor = "#e9eaf1"
+
+[theme.dark]
+primaryColor = "#9a83f0"
+backgroundColor = "#101120"
+secondaryBackgroundColor = "#181a2d"
+textColor = "#ececf6"
+borderColor = "#2a2d45"
+dataframeBorderColor = "#2a2d45"
+dataframeHeaderBackgroundColor = "#1e2036"
+linkColor = "#b3a3f7"
+codeBackgroundColor = "#1e2036"
+blueColor = "#6aa6e0"
+greenColor = "#4cc39a"
+orangeColor = "#e0a94a"
+yellowColor = "#f0c24e"
+redColor = "#ef6b5e"
+violetColor = "#9a83f0"
+chartCategoricalColors = ["#9a83f0", "#4cc39a", "#6aa6e0", "#e0a94a", "#e27ab0", "#4fb8b5", "#a3a6bf"]
+
+[theme.dark.sidebar]
+backgroundColor = "#14152a"
+secondaryBackgroundColor = "#1e2036"
+borderColor = "#2a2d45"
 
 [server]
 maxUploadSize = 15
 
 [client]
-toolbarMode = "minimal"  # hides the developer "Deploy" button
+toolbarMode = "viewer"  # no Deploy / Rerun / Clear cache; keeps the theme switcher, Print and Record screen
 
 [browser]
 gatherUsageStats = false

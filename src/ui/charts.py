@@ -16,7 +16,7 @@ PALETTE = ["#7159dc", "#27876e", "#4181bf", "#b78127", "#c0568c", "#389592", "#a
 def _layout(fig: go.Figure, height: int = 300) -> go.Figure:
     fig.update_layout(height=height, margin=dict(l=10, r=10, t=30, b=10), paper_bgcolor="rgba(0,0,0,0)",
                       plot_bgcolor="rgba(0,0,0,0)", legend=dict(orientation="h", y=-0.2),
-                      font=dict(family="DM Sans, sans-serif", size=12, color="#1d2038"), colorway=PALETTE, bargap=0.45)
+                      font=dict(family="DM Sans, sans-serif", size=12), colorway=PALETTE, bargap=0.45)
     fig.update_xaxes(gridcolor="rgba(127,127,127,.15)", zeroline=False, linecolor="rgba(127,127,127,.25)")
     fig.update_yaxes(gridcolor="rgba(127,127,127,.15)", zeroline=False, linecolor="rgba(127,127,127,.25)")
     return fig
